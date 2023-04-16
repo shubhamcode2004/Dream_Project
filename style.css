@@ -67,7 +67,7 @@ header {
 /* Home */
 
 #home {
-    background: url(Material/Background.png) repeat-y #393E46;
+    background: url(Material/Background_Desktop.png) repeat-y #393E46;
     background-position: 100%;
     background-size: 560px;
     color: white;
@@ -105,15 +105,11 @@ header {
     margin-left: 10px;
 }
 
-/* Typewrite */
-
-/* DEMO-SPECIFIC STYLES */
 .typing-demo {
-    width: 27ch;
+    width: 22ch;
     animation: typing 2s steps(22), blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 3px solid;
     font-size: 2em;
 }
 
@@ -126,5 +122,111 @@ header {
 @keyframes blink {
     50% {
         border-color: transparent
+    }
+}
+
+
+/* Media Queries */
+
+@media (max-width: 1000px) {
+    .typing-demo h1 {
+        font-size: 20px;
+    }
+
+    #home {
+        background: url(Material/Background_Mobile.png) repeat-y #393E46;
+        background-position: 100%;
+        background-size: 140px;
+        color: white;
+    }
+}
+
+@media (max-width: 800px) {
+    .typing-demo h1 {
+        font-size: 20px;
+    }
+
+    #home {
+        background: url(Material/Background_Mobile.png) repeat-y #393E46;
+        background-position: 100%;
+        background-size: 120px;
+        color: white;
+    }
+}
+
+@media (max-width: 600px) {
+    .typing-demo h1 {
+        text-align: center;
+    }
+
+    #home {
+        background: url(Material/Background_Mobile.png) repeat-y #393E46;
+        background-position: 100%;
+        background-size: 100px;
+        color: white;
+        padding: 0px 24px;
+    }
+
+    .button button {
+        width: 100px;
+        height: 40px;
+        background: #F11F1F;
+        border-radius: 60px;
+        color: white;
+    }
+
+    .button a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    #home {
+        background: url(Material/Background_Mobile.png) repeat-y #393E46;
+        background-position: 100%;
+        background-size: 80px;
+        color: white;
+        text-align: center;
+    }
+
+    .home h3 {
+        font-size: 18px;
+    }
+
+    .home h4,
+    .home h5 {
+        font-size: 16px;
+    }
+
+    .home h1 {
+        text-align: center;
+    }
+
+    .button button {
+        width: 100px;
+        height: 40px;
+        background: #F11F1F;
+        border-radius: 60px;
+        color: white;
+    }
+
+    .button a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .typing-demo {
+        width: auto;
+        animation: none;
+        white-space: normal;
+        overflow: hidden;
+        font-size: 20px;
     }
 }
