@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -32,7 +35,7 @@ header {
     background-color: rgba(0, 0, 0, 0.9);
     overflow-x: hidden;
     transition: 0.5s;
-    font-family: 'Alkatra', cursive;
+    font-family: 'Poppins', sans-serif;
 }
 
 .overlay-content {
@@ -71,6 +74,7 @@ header {
     background-position: 100%;
     background-size: 560px;
     color: white;
+    font-family: 'Lato', sans-serif;
 }
 
 .home {
@@ -100,7 +104,7 @@ header {
 .button a {
     text-decoration: none;
     color: white;
-    font-size: 24px;
+    font-size: 20px;
     margin-right: 10px;
     margin-left: 10px;
 }
@@ -124,6 +128,9 @@ header {
         border-color: transparent
     }
 }
+
+/* Services */
+
 
 
 /* Media Queries */

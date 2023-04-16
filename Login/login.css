@@ -6,12 +6,11 @@
 }
 
 body {
-    background-color: #222831;
+    background: wheat;
     font-family: 'Quicksand', sans-serif;
 }
 
 #container {
-    /* display: block; */
     margin-left: auto;
     margin-right: auto;
     width: 80%;
@@ -20,7 +19,7 @@ body {
 
 #cont {
     background: #393E46;
-    border: 2px solid #F11F1F;
+    border: 2px solid black;
     border-radius: 24px;
     padding-bottom: 10vh;
 }
