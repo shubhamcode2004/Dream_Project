@@ -78,7 +78,8 @@ header {
 }
 
 .home {
-    padding: 24vh 0px;
+    padding-top: 18vh;
+    padding-bottom: 28vh;
 }
 
 .typewrite {
