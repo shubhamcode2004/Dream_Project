@@ -66,3 +66,17 @@ window.onload = function () {
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
     document.body.appendChild(css);
 };
+
+// Dark & Light toggle
+
+document.querySelector(".day-night input").addEventListener("change", () => {
+    document.querySelector("body").classList.add("toggle");
+    setTimeout(() => {
+        document.querySelector("body").classList.toggle("light");
+
+        setTimeout(
+            () => document.querySelector("body").classList.remove("toggle"),
+            10
+        );
+    }, 5);
+});
