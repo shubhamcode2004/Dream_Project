@@ -235,6 +235,23 @@ header {
     text-align: center;
 }
 
+.owner {
+    width: 280px;
+    height: 300px;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 60px;
+}
+
+.owner img {
+    width: 100%;
+    transition: 0.5s all ease-in-out;
+}
+
+.owner:hover img {
+    transform: scale(1.2);
+}
+
 /* Media Queries */
 
 @media (max-width: 1000px) {
@@ -347,16 +364,7 @@ header {
     }
 
     .card_image img {
-        height: 180px;
-    }
-
-    .card_title {
-        color: #ffffff;
-        font-size: 1rem;
-        font-weight: 700;
-        letter-spacing: 1px;
-        text-transform: capitalize;
-        margin: 0px;
+        height: auto;
     }
 
     #about {
@@ -364,5 +372,22 @@ header {
         background-size: 80px;
         color: white;
         font-family: 'Lato', sans-serif;
+    }
+
+    .owner {
+        width: 180px;
+        height: 200px;
+        overflow: hidden;
+        margin: 0 auto;
+        border-radius: 60px;
+    }
+
+    .owner img {
+        width: 100%;
+        transition: 0.5s all ease-in-out;
+    }
+
+    .owner:hover img {
+        transform: scale(1.2);
     }
 }
