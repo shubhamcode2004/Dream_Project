@@ -42,7 +42,8 @@
             <div class="overlay-content">
                 <a href="#home" onclick="closeNav()">Home</a>
                 <a href="#gallery" onclick="closeNav()">Gallery</a>
-                <a href="#about" onclick="closeNav()">About</a><a href="#contact" onclick="closeNav()">Contact</a>
+                <a href="#about" onclick="closeNav()">About</a>
+                <a href="#contact" onclick="closeNav()">Contact</a>
                 <a href="#feedback" onclick="closeNav()">Feedback</a>
                 <a href="Login/login.html" onclick="closeNav()" style="color: green;">LOGIN</a>
             </div>
@@ -64,6 +65,7 @@
                 <h5>~ 15km Radius of Pune</h5>
                 <div class="button">
                     <a href="#gallery"><button>Gallery </button></a><a href="#contact"><button>Contact </button></a>
+                    <!-- <a href="tel:9890935362"><button>Call Now </button></a> -->
                 </div>
             </div>
         </section>
@@ -174,9 +176,10 @@
                 <div class="info">
                     <div class="owner">
                         <img src="Material/Owner.jpg" alt="Owner">
-                    </div><br>
+                    </div><br class="invisible">
                     <h4>SHUBHAM SLIDING WINDOW</h4>
                     <h5>( Ghanshyam Varma )</h5>
+                    <p>Legal <b class="text-danger">Owner</b> of <b class="text-danger">Shubham Sliding Window</b></p>
                     <h6 class="p-2">Professional Sliding Window Installation Services</h6>
                     <h5>~~ SPECIALIST IN ~~</h5>
                     <h6 class="container">
@@ -187,9 +190,79 @@
                 </div>
             </div>
         </section>
+        <section id="contact">
+            <div class="container-fluid">
+                <h1 class="title">Contact</h1>
+                <div class="location">
+                    <a href="https://www.google.com/maps/dir//Shubham+Sliding+Window/data=!4m8!4m7!1m0!1m5!1m1!1s0x3bc2b9fad59b8271:0xe4c3e8a042b9979f!2m2!1d73.7805528!2d18.6044446"
+                        target="_blank"><img src="Material/location.png" alt="Owner">
+                    </a>
+                </div>
+                <div class="contact container">
+                    <div class="call option">
+                        <h5>Contact</h5>
+                        <a href="tel:9890935362"><button>Call Now</button></a>
+                        <p><br class="invisible">+91 9890935362</p>
+                    </div>
+                    <div class="direction option">
+                        <h5>Address</h5>
+                        <a href=""><button>Get Direction</button></a>
+                        <p><br class="invisible">Gajanan Nagar, Maharashtra Nagari,<br>Kalewadi Phata,
+                            Rahatani,<br>Pimpri, Pune-411017
+                        </p>
+                    </div>
+                    <div class="time">
+                        <h5>Opening Hours</h5>
+                        <p><br class="invisible">
+                            Mon: 9:00 am - 9:00 pm<br>
+                            Tue: 9:00 am - 9:00 pm<br>
+                            Wed: 9:00 am - 9:00 pm<br>
+                            Thu: 9:00 am - 9:00 pm<br>
+                            Fri: 9:00 am - 9:00 pm<br>
+                            Sat: 9:00 am - 9:00 pm<br>
+                            Sun: 9:00 am - 9:00 pm<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="feedback">
+            <div class="container-fluid">
+                <h1 class="title text-white">Feedback</h1>
+                <div class="feedback p-lg-5">
+                    <form action="https://formspree.io/f/xrgvyzlz" method="POST" id="my-form">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Id *</label>
+                            <input type="email" id="email" name="email" required />
+                            <label class="privacy">We Do not share with anyone</label>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone No *</label>
+                            <input type="text" id="phone" name="phone" required />
+                            <label class="privacy">We Do not share with anyone</label>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Questions / Comments *</label>
+                            <textarea name="message" id="message" rows="5" wrap="hard" required></textarea>
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form><br class="invisible">
+                </div>
+                <div id="status"></div>
+            </div>
+        </section>
     </main>
     <footer>
-
+        <p class="text-center">Copyright© Shubham Sliding Window - Ghanshyam Varma || Since 2023 - All Rights Reserved
+        </p>
     </footer>
 </body>
 

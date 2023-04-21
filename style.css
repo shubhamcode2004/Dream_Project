@@ -80,7 +80,7 @@ header {
 
 .home {
     padding-top: 20vh;
-    padding-bottom: 26vh;
+    padding-bottom: 32vh;
 }
 
 .typewrite {
@@ -229,6 +229,7 @@ header {
     background-size: 140px;
     color: white;
     font-family: 'Lato', sans-serif;
+    padding: 28px;
 }
 
 .info {
@@ -240,16 +241,163 @@ header {
     height: 300px;
     overflow: hidden;
     margin: 0 auto;
-    border-radius: 60px;
+    border-radius: 100%;
 }
 
 .owner img {
     width: 100%;
-    transition: 0.5s all ease-in-out;
+    transition: 0.4s all ease-in-out;
 }
 
 .owner:hover img {
     transform: scale(1.2);
+}
+
+/* Contact */
+
+#contact {
+    background: #EEEEEE;
+}
+
+.location {
+    width: 70vw;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #212529;
+    border-radius: 12px;
+}
+
+.location img {
+    width: 100%;
+    transition: 0.4s all ease-in-out;
+}
+
+.location img:hover {
+    transform: scale(1.4);
+}
+
+.contact {
+    display: flex;
+    padding: 36px;
+    justify-content: space-around;
+}
+
+.contact .option a button {
+    width: 140px;
+    height: 50px;
+    background: #393E46;
+    color: white;
+}
+
+/* Feedback */
+
+#feedback {
+    background: url(Material/Background_Mobile.png) repeat-y #393E46;
+    background-position: 100%;
+    background-size: 80px;
+    font-family: 'Lato', sans-serif;
+}
+
+.feedback {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0px 0px 60px #00000010;
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+}
+
+form h2 {
+    /* font-family: "Quicksand", serif; */
+    color: black;
+    font-weight: 800;
+    margin-bottom: 20px;
+    padding: 16px 0px;
+    padding-bottom: 36px;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.form-group {
+    width: auto;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 5px;
+    font-size: 18px;
+    border: 2px solid rgba(128, 128, 128, 0.199);
+    margin-top: 5px;
+}
+
+textarea {
+    resize: vertical;
+    max-height: 240px;
+    min-height: 120px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 20px;
+    font-size: 24px;
+    border-radius: 8px;
+    font-family: "Montserrat";
+    color: rgb(27, 166, 247);
+    text-align: center;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s ease background-color;
+    border: 1px solid black;
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(214, 226, 236);
+}
+
+#status {
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+#status.success {
+    background-color: greenyellow;
+    animation: status 4s ease forwards;
+}
+
+#status.error {
+    background-color: red;
+    color: white;
+    animation: status 4s ease forwards;
+}
+
+/* Footer */
+
+footer {
+    background-color: #212529;
+    color: white;
+    padding: 1px;
+    font-size: 12px;
+}
+
+footer p {
+    position: relative;
+    top: 8px;
 }
 
 /* Media Queries */
@@ -379,15 +527,38 @@ header {
         height: 200px;
         overflow: hidden;
         margin: 0 auto;
-        border-radius: 60px;
+        border-radius: 40px;
     }
 
     .owner img {
         width: 100%;
-        transition: 0.5s all ease-in-out;
+        transition: 0.4s all ease-in-out;
     }
 
     .owner:hover img {
         transform: scale(1.2);
+    }
+
+    .location {
+        width: 90vw;
+    }
+
+    .location img {
+        transform: scale(2.4);
+    }
+
+    .location img:hover {
+        transform: scale(1.8);
+    }
+
+    .contact {
+        display: block;
+        padding: 10px;
+        justify-content: space-around;
+    }
+
+    .contact .option a button {
+        width: 140px;
+        height: 50px;
     }
 }
