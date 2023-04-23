@@ -48,3 +48,7 @@ function login() {
         return;
     }
 }
+
+function register() {
+    location.href('https://forms.gle/URnfYgi3mCrE4E4a6');
+};

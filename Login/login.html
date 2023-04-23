@@ -19,26 +19,26 @@
 </head>
 
 <body>
-    <div class="login-form">
-        <form id="login">
-            <h1>Login</h1>
-            <div class="content">
-                <div class="input-field">
-                    <input id="se" type="email" placeholder="Email" autocomplete="nope" required>
+    <section id="main_login">
+        <div class="login-form">
+            <form id="login">
+                <h1>LOGIN</h1>
+                <div class="content">
+                    <div class="input-field">
+                        <input id="se" type="email" placeholder="Email" autocomplete="nope">
+                    </div>
+                    <div class="input-field">
+                        <input id="sp" type="password" placeholder="Password" autocomplete="new-password">
+                    </div>
+                    <a href="https://forms.gle/URnfYgi3mCrE4E4a6" class="link">Forgot Your Password?</a>
                 </div>
-                <div class="input-field">
-                    <input id="sp" type="password" placeholder="Password" autocomplete="new-password" required>
+                <div class="action">
+                    <button type="submit" onclick="login()">Sign in</button>
+                    <a href="https://forms.gle/URnfYgi3mCrE4E4a6">Register</a>
                 </div>
-                <a href="https://forms.gle/URnfYgi3mCrE4E4a6" class="link">Forgot Your Password?</a>
-            </div>
-            <div class="action">
-                <button
-                    onclick="location.href=`https://docs.google.com/forms/d/e/1FAIpQLScq7PFcfS8lIXj-JBkbQNvigN_wgtGJv5GKkAKQzO_Oxoc0sA/viewform`"><a
-                        href="https://forms.gle/URnfYgi3mCrE4E4a6">Register</a></button>
-                <button type="submit" onclick="login()">Sign in</button>
-            </div>
-        </form>
-    </div>
+            </form>
+        </div>
+    </section>
 </body>
 
 </html>
