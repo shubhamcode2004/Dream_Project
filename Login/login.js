@@ -1,14 +1,14 @@
-var emailArray = ['user'];
-var passwordArray = ['user'];
-var loginBox = document.getElementById("login");
+var emailArray = ['user@test.com'];
+var passwordArray = ['user@test'];
+var loginBox = document.getElementById("login"); \
 
 function login() {
     event.preventDefault();
     var email = document.getElementById("se").value;
     var password = document.getElementById("sp").value;
 
-    var admin_email = 'shubhamvarma2004@gmail.com'
-    var admin_pass = 'ABCDEFGH12345678'
+    var admin_email = 'admin@test.com'
+    var admin_pass = 'admin@test'
 
     var i = emailArray.indexOf(email);
     if (email == admin_email) {

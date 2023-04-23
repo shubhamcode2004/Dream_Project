@@ -554,6 +554,7 @@ footer p {
     .contact {
         display: block;
         padding: 10px;
+        padding-top: 28px;
         justify-content: space-around;
     }
 

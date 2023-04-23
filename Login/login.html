@@ -6,27 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="login.css">
     <script src="login.js"></script>
     <title>Shubham Sliding Window - LOGIN</title>
 </head>
 
 <body>
-    <div id="container">
-        <div id="cont">
-            <div id="login">
-                <h1>SIGN IN</h1>
-                <h3>E-Mail *</h3>
-                <input id="se" type="email" required />
-                <h5><a href="https://forms.gle/URnfYgi3mCrE4E4a6" target="_blank">Register / New User</a></h5><br><br>
-                <h3>Password *</h3>
-                <input id="sp" type="password" required />
-                <h5><a href="https://forms.gle/URnfYgi3mCrE4E4a6" target="_blank">Forget Password ?</a></h5><br><br>
-                <button type="submit" onclick="login()">
-                    <h2>LOGIN</h2>
-                </button>
+    <div class="login-form">
+        <form id="login">
+            <h1>Login</h1>
+            <div class="content">
+                <div class="input-field">
+                    <input id="se" type="email" placeholder="Email" autocomplete="nope" required>
+                </div>
+                <div class="input-field">
+                    <input id="sp" type="password" placeholder="Password" autocomplete="new-password" required>
+                </div>
+                <a href="https://forms.gle/URnfYgi3mCrE4E4a6" class="link">Forgot Your Password?</a>
             </div>
-        </div>
+            <div class="action">
+                <button
+                    onclick="location.href=`https://docs.google.com/forms/d/e/1FAIpQLScq7PFcfS8lIXj-JBkbQNvigN_wgtGJv5GKkAKQzO_Oxoc0sA/viewform`"><a
+                        href="https://forms.gle/URnfYgi3mCrE4E4a6">Register</a></button>
+                <button type="submit" onclick="login()">Sign in</button>
+            </div>
+        </form>
     </div>
 </body>
 
