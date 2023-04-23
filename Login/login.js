@@ -1,6 +1,6 @@
 var emailArray = ['user@test.com'];
 var passwordArray = ['user@test'];
-var loginBox = document.getElementById("login"); \
+var loginBox = document.getElementById("login");
 
 function login() {
     event.preventDefault();
@@ -15,7 +15,6 @@ function login() {
         if (email == admin_email) {
             if (password == admin_pass) {
                 alert("You Logged into Admin Panel Sucessfully");
-                location.assign('../Clients/admin.html')
                 location.replace('../Clients/admin.html')
             }
             else {
@@ -43,7 +42,6 @@ function login() {
         return;
     } else {
         alert(email + " You Logged In User Panel Successfully");
-        location.assign('../Clients/user.html')
         location.replace('../Clients/user.html')
         document.getElementById("se").value = "";
         document.getElementById("sp").value = "";
