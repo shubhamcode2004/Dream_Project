@@ -256,7 +256,7 @@ header {
 
 /* Contact */
 
-#contact {
+/* #contact {
     background: #EEEEEE;
 }
 
@@ -292,12 +292,12 @@ header {
     height: 50px;
     background: #393E46;
     color: white;
-}
+} */
 
 /* Feedback */
 
 #feedback {
-    background: url(Material/Background_Mobile.png) repeat-y #393E46;
+    background: url(Material/Background_Mobile.pngd) repeat-y #EEEEEE;
     background-position: 100%;
     background-size: 80px;
     font-family: 'Lato', sans-serif;
