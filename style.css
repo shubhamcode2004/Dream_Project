@@ -256,43 +256,7 @@ header {
 
 /* Contact */
 
-/* #contact {
-    background: #EEEEEE;
-}
 
-.location {
-    width: 70vw;
-    height: auto;
-    overflow: hidden;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid #212529;
-    border-radius: 12px;
-}
-
-.location img {
-    width: 100%;
-    transition: 0.4s all ease-in-out;
-}
-
-.location img:hover {
-    transform: scale(1.4);
-}
-
-.contact {
-    display: flex;
-    padding: 36px;
-    justify-content: space-around;
-}
-
-.contact .option a button {
-    width: 140px;
-    height: 50px;
-    background: #393E46;
-    color: white;
-} */
 
 /* Feedback */
 
@@ -390,9 +354,13 @@ button[type="submit"]:hover {
 /* Footer */
 
 footer {
-    background-color: #212529;
+    line-height: 1.5;
+    font-family: "Poppins", sans-serif;
+    background-color: #24262b;
+    padding: 70px 0;
+    margin: 0;
+    box-sizing: border-box;
     color: white;
-    padding: 1px;
     font-size: 12px;
 }
 
@@ -416,14 +384,6 @@ footer p {
     box-sizing: border-box;
 }
 
-footer {
-    line-height: 1.5;
-    font-family: "Poppins", sans-serif;
-    background-color: #24262b;
-    padding: 70px 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 
 .footer-col {
     width: 25%;
@@ -446,7 +406,8 @@ footer {
     position: absolute;
     left: 0;
     bottom: -10px;
-    background-color: #7af76a;
+    /* background-color: #7af76a; */
+    background-color: #F11F1F;
     height: 2px;
     box-sizing: border-box;
     width: 50px;
