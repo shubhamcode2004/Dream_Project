@@ -188,6 +188,14 @@ header {
 .cards_item {
     display: flex;
     padding: 1rem;
+    text-decoration: none;
+}
+
+:hover.cards_item {
+    display: flex;
+    padding: 1rem;
+    position: relative;
+    top: -.3em;
 }
 
 .card {
@@ -435,7 +443,7 @@ footer p {
     display: inline-flex;
     height: 40px;
     width: 40px;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.5);
     margin: 0 10px 10px 0;
     text-align: center;
     align-items: center;
