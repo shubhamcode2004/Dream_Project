@@ -128,37 +128,6 @@ header {
   font-size: 2em;
 }
 
-.book a {
-  text-decoration: none;
-  color: #eeeeee;
-  font-size: 16px;
-  margin-right: 10px;
-  margin-left: 10px;
-}
-
-.book {
-  display: inline-block;
-  overflow: hidden;
-  text-align: center;
-}
-
-.book button {
-  width: auto;
-  height: 50px;
-  background: #f11f1f;
-  border-radius: 60px;
-  color: white;
-  transition: ease-in-out 0.1s;
-  padding: 0px 14px;
-}
-
-.book button:hover {
-  color: #f11f1f;
-  background: #eeeeee;
-  font-weight: 800;
-  transition: ease-in-out 0.1s;
-}
-
 @keyframes typing {
   from {
     width: 0;
