@@ -34,25 +34,34 @@ function sendMailOffline() {
   const serviceID = "email_1985";
   const templateID = "email_template_booking";
 
-  emailjs
-    .send(serviceID, templateID, params)
-    .then((res) => {
-      document.getElementById("name").value = "";
-      document.getElementById("phone").value = "";
-      document.getElementById("email").value = "";
-      document.getElementById("date").value = "";
-      document.getElementById("time").value = "";
-      document.getElementById("location").value = "";
-      document.getElementById("message").value = "";
-      console.log(res);
-      alert("Your Appointment Booked Successfully!!");
-      window.location.replace(
-        "https://shubhamslidingwindow.in/Appointment/appointment-success.html"
-      );
-    })
-    .catch((err) => {
-      alert("Incorrect Details Filled");
-    });
+  if (
+    (document.getElementById("phone").value !== "",
+    document.getElementById("email").value !== "",
+    document.getElementById("date").value !== "",
+    document.getElementById("location").value !== "")
+  ) {
+    emailjs
+      .send(serviceID, templateID, params)
+      .then((res) => {
+        document.getElementById("name").value = "";
+        document.getElementById("phone").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("date").value = "";
+        document.getElementById("time").value = "";
+        document.getElementById("location").value = "";
+        document.getElementById("message").value = "";
+        console.log(res);
+        alert("Your Appointment Booked Successfully!!");
+        window.location.replace(
+          "https://shubhamslidingwindow.in/Appointment/appointment-success.html"
+        );
+      })
+      .catch((err) => {
+        alert("Incorrect Details Filled");
+      });
+  } else {
+    alert("Please make sure to complete all the mandatory details.");
+  }
 }
 
 // ************************************************************
@@ -71,19 +80,28 @@ function sendMailOnline() {
   const serviceID = "email_1985";
   const templateID = "email_template_booking";
 
-  emailjs
-    .send(serviceID, templateID, params)
-    .then((res) => {
-      document.getElementById("name").value = "";
-      document.getElementById("phone").value = "";
-      document.getElementById("email").value = "";
-      document.getElementById("date").value = "";
-      document.getElementById("time").value = "";
-      document.getElementById("location").value = "";
-      document.getElementById("message").value = "";
-      console.log(res);
-    })
-    .catch((err) => {
-      alert("Incorrect Details Filled");
-    });
+  if (
+    (document.getElementById("phone").value !== "",
+    document.getElementById("email").value !== "",
+    document.getElementById("date").value !== "",
+    document.getElementById("location").value !== "")
+  ) {
+    emailjs
+      .send(serviceID, templateID, params)
+      .then((res) => {
+        document.getElementById("name").value = "";
+        document.getElementById("phone").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("date").value = "";
+        document.getElementById("time").value = "";
+        document.getElementById("location").value = "";
+        document.getElementById("message").value = "";
+        console.log(res);
+      })
+      .catch((err) => {
+        alert("Incorrect Details Filled");
+      });
+  } else {
+    alert("Please make sure to complete all the mandatory details.");
+  }
 }
