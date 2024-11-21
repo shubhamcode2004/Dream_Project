@@ -1,112 +1,78 @@
-/* Open when someone clicks on the span element */
 function openNav() {
   document.getElementById("myNav").style.width = "100%";
 }
-
-/* Close when someone clicks on the "x" symbol inside the overlay */
 function closeNav() {
   document.getElementById("myNav").style.width = "0%";
 }
-
 class TxtType {
-  constructor(el, toRotate, period) {
-    this.toRotate = toRotate;
-    this.el = el;
-    this.loopNum = 0;
-    this.period = parseInt(period, 10) || 2000;
-    this.txt = "";
-    this.tick();
-    this.isDeleting = false;
+  constructor(t, e, s) {
+    (this.toRotate = e),
+      (this.el = t),
+      (this.loopNum = 0),
+      (this.period = parseInt(s, 10) || 2e3),
+      (this.txt = ""),
+      this.tick(),
+      (this.isDeleting = !1);
   }
   tick() {
-    var i = this.loopNum % this.toRotate.length;
-    var fullTxt = this.toRotate[i];
-
-    if (this.isDeleting) {
-      this.txt = fullTxt.substring(0, this.txt.length - 1);
-    } else {
-      this.txt = fullTxt.substring(0, this.txt.length + 1);
-    }
-
-    this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
-
-    var that = this;
-    var delta = 200 - Math.random() * 100;
-
-    if (this.isDeleting) {
-      delta /= 2;
-    }
-
-    if (!this.isDeleting && this.txt === fullTxt) {
-      delta = this.period;
-      this.isDeleting = true;
-    } else if (this.isDeleting && this.txt === "") {
-      this.isDeleting = false;
-      this.loopNum++;
-      delta = 500;
-    }
-
-    setTimeout(function () {
-      that.tick();
-    }, delta);
+    var t = this.loopNum % this.toRotate.length,
+      e = this.toRotate[t];
+    this.isDeleting
+      ? (this.txt = e.substring(0, this.txt.length - 1))
+      : (this.txt = e.substring(0, this.txt.length + 1)),
+      (this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>");
+    var s = this,
+      i = 200 - 100 * Math.random();
+    this.isDeleting && (i /= 2),
+      this.isDeleting || this.txt !== e
+        ? this.isDeleting &&
+          "" === this.txt &&
+          ((this.isDeleting = !1), this.loopNum++, (i = 500))
+        : ((i = this.period), (this.isDeleting = !0)),
+      setTimeout(function () {
+        s.tick();
+      }, i);
   }
 }
-
-window.onload = function () {
-  var elements = document.getElementsByClassName("typewrite");
-  for (var i = 0; i < elements.length; i++) {
-    var toRotate = elements[i].getAttribute("data-type");
-    var period = elements[i].getAttribute("data-period");
-    if (toRotate) {
-      new TxtType(elements[i], JSON.parse(toRotate), period);
+function ajax(t, e, s, i, n) {
+  var a = new XMLHttpRequest();
+  a.open(t, e),
+    a.setRequestHeader("Accept", "application/json"),
+    (a.onreadystatechange = function () {
+      a.readyState === XMLHttpRequest.DONE &&
+        (200 === a.status
+          ? i(a.response, a.responseType)
+          : n(a.status, a.response, a.responseType));
+    }),
+    a.send(s);
+}
+(window.onload = function () {
+  for (
+    var t = document.getElementsByClassName("typewrite"), e = 0;
+    e < t.length;
+    e++
+  ) {
+    var s = t[e].getAttribute("data-type"),
+      i = t[e].getAttribute("data-period");
+    s && new TxtType(t[e], JSON.parse(s), i);
+  }
+  var n = document.createElement("style");
+  (n.type = "text/css"),
+    (n.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}"),
+    document.body.appendChild(n);
+}),
+  window.addEventListener("DOMContentLoaded", function () {
+    var t = document.getElementById("my-form");
+    function e() {
+      t.reset(), alert("Submitted Sucessfully !");
     }
-  }
-  // INJECT CSS
-  var css = document.createElement("style");
-  css.type = "text/css";
-  css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-  document.body.appendChild(css);
-};
-window.addEventListener("DOMContentLoaded", function () {
-  // get the form elements defined in your form HTML above
-
-  var form = document.getElementById("my-form");
-  // var button = document.getElementById("my-form-button");
-  var status = document.getElementById("status");
-
-  // Success and Error functions for after the form is submitted
-
-  function success() {
-    form.reset();
-    alert("Submitted Sucessfully !");
-  }
-
-  function error() {
-    alert("OOPS ! There was some Problem");
-  }
-
-  // handle the form submission event
-
-  form.addEventListener("submit", function (ev) {
-    ev.preventDefault();
-    var data = new FormData(form);
-    ajax(form.method, form.action, data, success, error);
+    function s() {
+      alert("OOPS ! There was some Problem");
+    }
+    document.getElementById("status"),
+      t.addEventListener("submit", function (i) {
+        i.preventDefault();
+        var n = new FormData(t);
+        ajax(t.method, t.action, n, e, s);
+      });
   });
-});
-
-// helper function for sending an AJAX request
-
-function ajax(method, url, data, success, error) {
-  var xhr = new XMLHttpRequest();
-  xhr.open(method, url);
-  xhr.setRequestHeader("Accept", "application/json");
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState !== XMLHttpRequest.DONE) return;
-    if (xhr.status === 200) {
-      success(xhr.response, xhr.responseType);
-    } else {
-      error(xhr.status, xhr.response, xhr.responseType);
-    }
-  };
-  xhr.send(data);
-}
