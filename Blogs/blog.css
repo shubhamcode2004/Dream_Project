@@ -1,0 +1,358 @@
+* {
+    scrollbar-width: none;
+}
+
+header {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+.navbar {
+    background: #222831;
+    color: black;
+}
+
+.menu {
+    border-radius: 36px;
+    background: white;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.overlay-content {
+    position: relative;
+    top: 14%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 6px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 1vh;
+    right: 4vw;
+    font-size: 80px;
+}
+
+/* MAIN */
+
+.title {
+    font-family: 'Poppins', sans-serif;
+    padding: 60px 0;
+    text-align: center
+}
+
+#blog-posts {
+    width: 100%;
+    background: white;
+    padding: 14px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    border-radius: 5px;
+    animation: fadeInUp 1s ease-in;
+    /* display: flex;
+    justify-content: space-between; */
+    /* overflow: hidden; */
+}
+
+#latest-blog-posts,
+#other-blog-posts {
+    padding: 20px;
+}
+
+#popular-blog-posts {
+    background: #393e46;
+    padding: 20px;
+}
+
+.blog-div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.post {
+    padding: 10px;
+    margin: 8px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in;
+    cursor: pointer;
+}
+
+.popular-post {
+    padding: 10px;
+    margin: 8px;
+    background: #393e46;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in;
+    cursor: pointer;
+}
+
+.post img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    /* width: 50%;
+  height: 50%; */
+    /* overflow: hidden; */
+}
+
+.post h2 {
+    color: #333;
+}
+
+.post p {
+    color: #666;
+}
+
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup {
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    width: 80%;
+    height: 86%;
+    /* text-align: left; */
+    position: relative;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    overflow-y: auto;
+    top: 4%;
+}
+
+#popup-title {
+    /* text-align: justify; */
+    padding-top: 20px;
+    padding-bottom: 16px;
+}
+
+#popup-sub-title {
+    text-align: justify;
+}
+
+#popup-content {
+    text-align: justify;
+}
+
+.popup.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.popup h2 {
+    margin: 0;
+}
+
+.popup img {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.popup-close {
+    /* position: absolute; */
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: bold;
+    background: none;
+    color: red;
+    background: red;
+    border: 2px solid red;
+    /* border: transparent; */
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    /* padding-bottom: 2px; */
+}
+
+.popup-close:hover {
+    background: red;
+    color: white;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .popup {
+        background: white;
+        padding: 20px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        width: 90%;
+        height: 86%;
+        position: relative;
+        opacity: 0;
+        transform: scale(0.8);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        overflow-y: auto;
+        top: 4%;
+    }
+
+
+    .blog-div {
+        display: block;
+    }
+}
+
+/* FOOTER */
+
+footer {
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+    background-color: #24262b;
+    padding: 70px 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 12px;
+}
+
+footer p {
+    position: relative;
+    top: 10vh;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.footer-col ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #f11f1f;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-flex;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+@media (max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}
