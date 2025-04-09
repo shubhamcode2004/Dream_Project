@@ -29,6 +29,8 @@ function sendMailOffline() {
     time: document.getElementById("time").value,
     location: document.getElementById("location").value,
     message: document.getElementById("message").value,
+    payment: (document.getElementById("payment_mode").value =
+      "Pay at Location (On-Site Payment)"),
   };
 
   const serviceID = "email_1985";
@@ -50,8 +52,9 @@ function sendMailOffline() {
         document.getElementById("time").value = "";
         document.getElementById("location").value = "";
         document.getElementById("message").value = "";
+        document.getElementById("payment_mode").value =
+          "Pay at Location (On-Site Payment)";
         console.log(res);
-        alert("Your Appointment Booked Successfully!!");
         window.location.replace(
           "https://shubhamslidingwindow.in/Appointment/appointment-success.html"
         );
@@ -75,6 +78,8 @@ function sendMailOnline() {
     time: document.getElementById("time").value,
     location: document.getElementById("location").value,
     message: document.getElementById("message").value,
+    payment: (document.getElementById("payment_mode").value =
+      "Paid Online (Payment Gateway)"),
   };
 
   const serviceID = "email_1985";
@@ -96,6 +101,8 @@ function sendMailOnline() {
         document.getElementById("time").value = "";
         document.getElementById("location").value = "";
         document.getElementById("message").value = "";
+        document.getElementById("payment_mode").value =
+          "Paid Online (Payment Gateway)";
         console.log(res);
       })
       .catch((err) => {
