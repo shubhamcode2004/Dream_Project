@@ -26,8 +26,8 @@ class TxtType {
     this.isDeleting && (i /= 2),
       this.isDeleting || this.txt !== e
         ? this.isDeleting &&
-          "" === this.txt &&
-          ((this.isDeleting = !1), this.loopNum++, (i = 500))
+        "" === this.txt &&
+        ((this.isDeleting = !1), this.loopNum++, (i = 500))
         : ((i = this.period), (this.isDeleting = !0)),
       setTimeout(function () {
         s.tick();
